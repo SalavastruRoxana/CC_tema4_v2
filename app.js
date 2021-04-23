@@ -11,6 +11,8 @@ const msal = require('@azure/msal-node');
 
 app.use('/home', require('./Routes/home'));
 app.use('/logout', require('./Routes/logout'));
+app.use('/', require('./Routes/login'));
+/*
 const config = {
     auth: {
         clientId: "3f89bf79-f08d-4a61-879f-99d0349ffe3c",
@@ -65,7 +67,7 @@ app.get('/redirect', (req, res) => {
         res.status(500).send(error);
     });
 });
-
+*/
 app.use('/', require('./Routes/videos'));
 app.use('/', require('./Routes/maps'));
 const register = require('./Routes/register')
