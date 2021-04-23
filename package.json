@@ -13,11 +13,13 @@
     "nodemon": "^2.0.7"
   },
   "dependencies": {
+    "@azure/msal-node": "^1.0.3",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "microsoft-cognitiveservices-speech-sdk": "^1.16.0",
     "mysql": "^2.18.1",
+    "rm": "^0.1.8",
     "tedious": "^1.14.0",
     "tedious-connection-pool": "^1.0.5"
   },
