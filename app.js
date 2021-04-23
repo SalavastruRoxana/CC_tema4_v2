@@ -34,7 +34,7 @@ const cca = new msal.ConfidentialClientApplication(config);
 app.get('/', (req, res) => {
     const authCodeUrlParameters = {
         scopes: ["user.read"],
-        redirectUri: "http://localhost:3000/redirect",
+        redirectUri: "https://tema4-cc-v2.azurewebsites.net/redirect",
     };
 
     // get url to sign user in and consent to scopes needed for application
@@ -47,7 +47,7 @@ app.get('/redirect', (req, res) => {
     const tokenRequest = {
         code: req.query.code,
         scopes: ["user.read"],
-        redirectUri: "http://localhost:3000/redirect",
+        redirectUri: "https://tema4-cc-v2.azurewebsites.net/redirect",
     };
 
     cca.acquireTokenByCode(tokenRequest).then((response) => {
