@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Traseu intre doua locatii</title>
+
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="This sample shows how to retrieve traffic information along a route using the <b>sectionType</b> option, and color the sections on the map. " />
+    <meta name="keywords" content="Microsoft maps, map, gis, API, SDK, services, module, route, directions, route sections, traffic" />
+    <meta name="author" content="Microsoft Azure Maps" />
+
+    <!-- Add references to the Azure Maps Map control JavaScript and CSS files. -->
+    <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+
+    <!-- Add a reference to the Azure Maps Services Module JavaScript file. -->
+    <script src="https://atlas.microsoft.com/sdk/javascript/service/2/atlas-service.min.js"></script>
+
+
+</head>
+
+<body onload=<%=_.GetMap%>>
+    <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
+
+    <div style="position:absolute;top:15px;left:15px;background-color:white;padding:10px;border-radius:10px;">
+        <table>
+            <tr>
+                <td>Plecare: </td>
+                <td><input type="text" id="startTbx" value="Copou, Iasi" /></td>
+            </tr>
+            <tr>
+                <td>Sosire: </td>
+                <td><input type="text" id="endTbx" value="Palas Mall, Iasi" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Calculate Route" onclick="calculateRoute()" /></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
